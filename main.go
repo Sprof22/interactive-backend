@@ -26,5 +26,13 @@ func main() {
 	r.PUT("/projects/:id", controllers.UpdateProject)
 	r.DELETE("/projects/:id", controllers.DeleteProject)
 
+	r.POST("/files", controllers.CreateProject)
+	r.GET("/files", controllers.GetProjects)
+	r.GET("/files/:id", controllers.GetSingleProject)
+	r.PUT("/files/:id", controllers.UpdateProject)
+	r.DELETE("/files/:id", controllers.DeleteProject)
+
+	r.POST("/folders", controllers.CreateFolder)
+	// r.POST("/folders/:id/files", controllers.CreateFile)
 	r.Run() // listen and serve on 0.0.0.0:8080
 }
